@@ -12,10 +12,11 @@ graph TD;
     Yes -->Guess_Num_7_Times;
     No -->Exit;
 
-    Guess_Num_7_Times -->Correct;
-    Guess_Num_7_Times -->Incorrect;
+    Guess_Num_7_Times -->Win;
+    Guess_Num_7_Times -->Retry;
 
-    Correct -->Exit;
-
-    Incorrect -->Guess_Num_7_Times;
+    Win -->Start;
+    Retry -->Guess_Num_7_Times
+    Retry -->Lost
+    Lost -->Start
 ```

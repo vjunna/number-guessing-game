@@ -9,14 +9,14 @@ graph TD;
     Start -->Yes;
     Start -->No;
 
-    Yes -->Guess_Num_7_Times;
+    Yes -->7_Tries;
     No -->Exit;
 
-    Guess_Num_7_Times -->Win;
-    Guess_Num_7_Times -->Retry;
+    7_Tries -->Win;
+    7_Tries -->Retry;
 
     Win -->Start;
-    Retry -->Guess_Num_7_Times
-    Retry -->Lost
-    Lost -->Start
+    Retry -->7_Tries;
+    Retry -->Lost;
+    Lost -->Start;
 ```

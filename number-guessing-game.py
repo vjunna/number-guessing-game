@@ -4,7 +4,7 @@
 import random
 
 while True:
-    welcome = input(f"\nWelcome to the number guessing game.\nPlease type 'yes' to play or press any key to exit. : ").upper()  
+    welcome = input(f"\nWelcome to the number guessing game.\nType 'yes' and press 'Enter' key to play or press 'Enter' key to exit. : ").upper()  
 
     if welcome == 'YES':
         random_num = random.randint(0,9)
@@ -28,5 +28,6 @@ while True:
             except ValueError:
                 print("Incorrect value entered. Try again.")
     else:
-        print("You chose to exit the game")
-        break
+        if welcome != 'YES':
+            print("You chose to exit the game")
+            break
